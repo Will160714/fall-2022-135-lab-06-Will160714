@@ -9,7 +9,6 @@ TEST_CASE("Task B"){
     CHECK(encryptCaesar("Way to Go!", 5) == "Bfd yt Lt!");
     CHECK(encryptCaesar("!", 1) == "!");
     CHECK(encryptCaesar("Hello, World!", 0) == "Hello, World!");
-    CHECK(encryptCaesar("L",5) == "Q");
     CHECK(encryptCaesar("W", 5) == "B");
 }
 
@@ -24,4 +23,7 @@ TEST_CASE("Task C"){
 
 TEST_CASE("Task D"){
     CHECK(decryptCaesar("Bfd yt Lt!", 5) == "Way to Go!");
+    CHECK(decryptCaesar("", 1) == "");
+    CHECK(decryptCaesar("sdas", 0) == "sdas");
+
 }
