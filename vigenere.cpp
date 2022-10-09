@@ -16,7 +16,19 @@ std::string encryptVigenere(std::string plaintext, std::string keyword){
 
     for(int y = 0; y < plaintext.length(); y++){
         if(isalpha(plaintext[y])){
-            result += plaintext[y] + number[count];
+            if(isupper(plaintext[y])){
+                if(plaintext[y] + number[count] <= 90)
+                    result += plaintext[y] + number[count];
+                else
+                    result += 'A' + (91 - ((int)plaintext[y] + number[count]));
+            }
+            else{
+                if(plaintext[y] + number[count] <= 122)
+                    result += plaintext[y] + number[count];
+                else
+                    result += 'a' + (123 - ((int)plaintext[y] + number[count]));
+            }
+
             count ++;
             if(count == keyword.length())
                 count = 0;
