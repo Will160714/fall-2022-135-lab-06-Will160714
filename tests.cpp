@@ -19,11 +19,20 @@ TEST_CASE("Task C"){
     CHECK(encryptVigenere("Test", "") == "Test");
     CHECK(encryptVigenere(";", "hi") == ";");
     CHECK(encryptVigenere("P", "eat") == "T");
+    CHECK(encryptVigenere("Z", "b") == "A"); 
 }
 
 TEST_CASE("Task D"){
     CHECK(decryptCaesar("Bfd yt Lt!", 5) == "Way to Go!");
     CHECK(decryptCaesar("", 1) == "");
     CHECK(decryptCaesar("sdas", 0) == "sdas");
-
+    CHECK(decryptVigenere("Jevpq, Wyvnd!", "cake") == "Hello, World!");
+    CHECK(decryptVigenere("", "cake") == "");
+    CHECK(decryptVigenere("Sadwe", " ") == "Sadwe");
+    CHECK(decryptVigenere(";", "hi") == ";");
+    CHECK(decryptVigenere("Ab", "ac") == "Az"); 
+    CHECK(decryptVigenere("ab", "bc") == "zz");
+    CHECK(decryptVigenere("AB", "BD") == "ZY");
 }
+
+
