@@ -24,13 +24,13 @@ std::string decryptVigenere(std::string ciphertext, std::string keyword){
                 if(ciphertext[y] - number[count] >= 65)
                     result += ciphertext[y] - number[count];
                 else
-                    result += "Z" - (65 - (ciphertext[y] - number[count]));
+                    result += 'Z' - (64 - ((int)ciphertext[y] - number[count]));
             }
             else{
                 if(ciphertext[y] - number[count] >= 97)
                     result += ciphertext[y] - number[count];
                 else
-                    result += "z" - (97 - (ciphertext[y] - number[count]));
+                    result += 'z' - (96 - ((int)ciphertext[y] - number[count]));
             }
 
             count ++;
