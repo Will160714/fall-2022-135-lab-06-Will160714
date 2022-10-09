@@ -1,4 +1,4 @@
-main: main.o caesar.o vigenere.o decrypt.p
+main: main.o caesar.o vigenere.o decrypt.o
 	g++ -o main main.o caesar.o vigenere.o decrypt.o
 
 tests: tests.o caesar.o vigenere.o decrypt.o
